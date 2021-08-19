@@ -1,0 +1,14 @@
+{
+    "operationName": null,
+    "variables": {
+      "id": "611a7a963561502980d11aa3",
+      "data": {
+        "options": [
+          {
+            "name": "একমত"
+          }
+        ]
+      }
+    },
+    "query": "mutation ($id: ID!, $data: updatePoll!) {\n  updatePoll(id: $id, data: $data) {\n    id\n    name\n    options {\n      name\n      vote\n      __typename\n    }\n    __typename\n  }\n}\n"
+  }
