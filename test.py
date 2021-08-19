@@ -11,8 +11,10 @@ headers = {'Authorization' : '', 'Accept' : 'application/json', 'Content-Type' :
 
 rdata = requests.post(url, data=open('payload.json', 'rb'), headers=headers)
 j = json.loads(rdata.text)
+
 print(j)
-print(j['data']['updatePoll']['id'] + " : " + j['data']['updatePoll']['op'] + " votes.")
+
+print(j['data']['updatePoll']['id'] + " : " + j['data']['updatePoll']['options'][0] + " votes.")
 
 
 
